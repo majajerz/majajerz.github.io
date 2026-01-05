@@ -9,6 +9,12 @@ interface ArtworkCardProps {
 }
 
 export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
+  // Calculate row span for masonry grid based on aspect ratio
+  const aspectRatio = artwork.height / artwork.width;
+  const baseWidth = 400; // approximate column width
+  const rowHeight = 10;
+  const rowSpan = Math.ceil(aspectRatio * baseWidth / rowHeight) + 4; // +4 for padding/gap
+
   return (
     <article
       className="group relative cursor-pointer overflow-hidden rounded-sm bg-[var(--color-accent-secondary)]"
@@ -22,9 +28,13 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
         }
       }}
       aria-label={`View ${artwork.title}`}
+      style={{
+        aspectRatio: `${artwork.width}/${artwork.height}`,
+        gridRowEnd: `span ${rowSpan}`
+      }}
     >
-      {/* Image Container with Aspect Ratio */}
-      <div className="relative aspect-[4/5] overflow-hidden">
+      {/* Image Container with Dynamic Aspect Ratio */}
+      <div className="relative w-full h-full">
         <Image
           src={artwork.imageSrc}
           alt={artwork.title}
@@ -32,32 +42,18 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
           blurDataURL={artwork.blurDataUrl}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-contain transition-opacity duration-300"
         />
 
-        {/* Hover Overlay with Metadata */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-highlight)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-            <h3
-              className="text-lg font-medium mb-1"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              {artwork.title}
-            </h3>
-            <p className="text-sm text-white/80">
-              {artwork.year} &middot; {artwork.medium}
-            </p>
-            <div className="flex gap-2 mt-2">
-              {artwork.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-2 py-0.5 text-xs border border-white/40 rounded"
-                >
-                  {tag}
-                </span>
-              ))}
+        {/* White Overlay on Hover with Simplified Metadata */}
+        <div className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {(artwork.title || artwork.year) && (
+            <div className="absolute top-4 left-4">
+              <p className="text-black text-sm font-medium">
+                {[artwork.title, artwork.year].filter(Boolean).join(', ')}
+              </p>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </article>

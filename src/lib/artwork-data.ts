@@ -1,11 +1,8 @@
-export type ArtworkTag = "Digital" | "Physical";
-
 export interface Artwork {
   id: string;
   title: string;
   year: number;
   medium: string;
-  tags: ArtworkTag[];
   imageSrc: string;
   blurDataUrl: string;
   width: number;
@@ -21,22 +18,20 @@ const placeholderBlur =
 export const finishedArtwork: Artwork[] = [
   {
     id: "artwork-1",
-    title: "Ethereal Dreams",
+    title: "New year c",
     year: 2024,
     medium: "Digital Illustration",
-    tags: ["Digital"],
-    imageSrc: "/images/gallery/artwork-1.svg",
+    imageSrc: "images/gallery/artwork-1.png",
     blurDataUrl: placeholderBlur,
-    width: 1200,
-    height: 1600,
-    description: "An exploration of dreamlike landscapes in digital form.",
+    width: 100,
+    height: 100,
+    description: "a nice card.",
   },
   {
     id: "artwork-2",
     title: "Urban Fragments",
     year: 2024,
     medium: "Acrylic on Canvas",
-    tags: ["Physical"],
     imageSrc: "/images/gallery/artwork-2.svg",
     blurDataUrl: placeholderBlur,
     width: 1400,
@@ -48,7 +43,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Digital Garden",
     year: 2023,
     medium: "3D Render",
-    tags: ["Digital"],
     imageSrc: "/images/gallery/artwork-3.svg",
     blurDataUrl: placeholderBlur,
     width: 1600,
@@ -59,7 +53,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Ceramic Vessels",
     year: 2023,
     medium: "Glazed Ceramic",
-    tags: ["Physical"],
     imageSrc: "/images/gallery/artwork-4.svg",
     blurDataUrl: placeholderBlur,
     width: 1200,
@@ -71,7 +64,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Neon Nights",
     year: 2024,
     medium: "Digital Painting",
-    tags: ["Digital"],
     imageSrc: "/images/gallery/artwork-5.svg",
     blurDataUrl: placeholderBlur,
     width: 1800,
@@ -82,7 +74,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Woven Textures",
     year: 2022,
     medium: "Mixed Media on Paper",
-    tags: ["Physical"],
     imageSrc: "/images/gallery/artwork-6.svg",
     blurDataUrl: placeholderBlur,
     width: 1000,
@@ -94,7 +85,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Algorithmic Patterns",
     year: 2024,
     medium: "Generative Art",
-    tags: ["Digital"],
     imageSrc: "/images/gallery/artwork-7.svg",
     blurDataUrl: placeholderBlur,
     width: 1400,
@@ -105,7 +95,6 @@ export const finishedArtwork: Artwork[] = [
     title: "Stone Study",
     year: 2023,
     medium: "Charcoal on Paper",
-    tags: ["Physical"],
     imageSrc: "/images/gallery/artwork-8.svg",
     blurDataUrl: placeholderBlur,
     width: 1100,
@@ -120,7 +109,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "Portrait Study #12",
     year: 2024,
     medium: "Graphite on Paper",
-    tags: ["Physical"],
     imageSrc: "/images/sketchbook/sketch-1.svg",
     blurDataUrl: placeholderBlur,
     width: 800,
@@ -131,7 +119,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "Concept Exploration",
     year: 2024,
     medium: "Digital Sketch",
-    tags: ["Digital"],
     imageSrc: "/images/sketchbook/sketch-2.svg",
     blurDataUrl: placeholderBlur,
     width: 1200,
@@ -142,7 +129,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "Gesture Drawings",
     year: 2024,
     medium: "Ink on Paper",
-    tags: ["Physical"],
     imageSrc: "/images/sketchbook/sketch-3.svg",
     blurDataUrl: placeholderBlur,
     width: 900,
@@ -153,7 +139,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "Color Studies",
     year: 2024,
     medium: "Watercolor",
-    tags: ["Physical"],
     imageSrc: "/images/sketchbook/sketch-4.svg",
     blurDataUrl: placeholderBlur,
     width: 1000,
@@ -164,7 +149,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "UI Concept",
     year: 2024,
     medium: "Digital",
-    tags: ["Digital"],
     imageSrc: "/images/sketchbook/sketch-5.svg",
     blurDataUrl: placeholderBlur,
     width: 1400,
@@ -175,7 +159,6 @@ export const sketchbookArtwork: Artwork[] = [
     title: "Nature Notes",
     year: 2023,
     medium: "Pencil and Watercolor",
-    tags: ["Physical"],
     imageSrc: "/images/sketchbook/sketch-6.svg",
     blurDataUrl: placeholderBlur,
     width: 1100,
@@ -190,18 +173,6 @@ export function getFinishedArtwork(): Artwork[] {
 
 export function getSketchbookArtwork(): Artwork[] {
   return sketchbookArtwork;
-}
-
-export function filterArtworkByTags(
-  artwork: Artwork[],
-  selectedTags: ArtworkTag[]
-): Artwork[] {
-  if (selectedTags.length === 0) {
-    return artwork;
-  }
-  return artwork.filter((item) =>
-    item.tags.some((tag) => selectedTags.includes(tag))
-  );
 }
 
 export function getArtworkById(id: string): Artwork | undefined {

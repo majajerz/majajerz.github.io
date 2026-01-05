@@ -1,22 +1,51 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
 import type { Artwork } from "@/lib/artwork-data";
 
 interface LightboxProps {
   artwork: Artwork;
+  allArtwork: Artwork[];
   onClose: () => void;
 }
 
-export default function Lightbox({ artwork, onClose }: LightboxProps) {
+export default function Lightbox({ artwork, allArtwork, onClose }: LightboxProps) {
+  const [currentArtwork, setCurrentArtwork] = useState(artwork);
+
+  // Update current artwork when prop changes
+  useEffect(() => {
+    setCurrentArtwork(artwork);
+  }, [artwork]);
+
+  // Find current index and determine if prev/next are available
+  const currentIndex = allArtwork.findIndex(a => a.id === currentArtwork.id);
+  const hasPrev = currentIndex > 0;
+  const hasNext = currentIndex < allArtwork.length - 1;
+
+  const handlePrev = useCallback(() => {
+    if (hasPrev) {
+      setCurrentArtwork(allArtwork[currentIndex - 1]);
+    }
+  }, [hasPrev, currentIndex, allArtwork]);
+
+  const handleNext = useCallback(() => {
+    if (hasNext) {
+      setCurrentArtwork(allArtwork[currentIndex + 1]);
+    }
+  }, [hasNext, currentIndex, allArtwork]);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
+      } else if (e.key === "ArrowLeft") {
+        handlePrev();
+      } else if (e.key === "ArrowRight") {
+        handleNext();
       }
     },
-    [onClose]
+    [onClose, handlePrev, handleNext]
   );
 
   useEffect(() => {
@@ -31,16 +60,16 @@ export default function Lightbox({ artwork, onClose }: LightboxProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--color-highlight)]/90 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label={`Viewing ${artwork.title}`}
+      aria-label={`Viewing ${currentArtwork.title}`}
     >
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 md:top-6 md:right-6 p-2 text-white hover:text-[var(--color-accent-secondary)] transition-colors z-10"
+        className="absolute top-4 right-4 md:top-6 md:right-6 p-2 text-black hover:text-gray-600 transition-colors z-10"
         aria-label="Close lightbox"
       >
         <svg
@@ -59,66 +88,75 @@ export default function Lightbox({ artwork, onClose }: LightboxProps) {
         </svg>
       </button>
 
-      {/* Content Container */}
+      {/* Previous Arrow */}
+      {hasPrev && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handlePrev();
+          }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-black hover:text-gray-600 transition-colors z-10"
+          aria-label="Previous image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+      )}
+
+      {/* Next Arrow */}
+      {hasNext && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleNext();
+          }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-black hover:text-gray-600 transition-colors z-10"
+          aria-label="Next image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      )}
+
+      {/* Image Container */}
       <div
-        className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 max-w-7xl mx-auto p-4 md:p-8"
+        className="relative max-w-[90vw] max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image */}
-        <div className="relative w-full max-w-3xl aspect-auto">
-          <Image
-            src={artwork.imageSrc}
-            alt={artwork.title}
-            width={artwork.width}
-            height={artwork.height}
-            placeholder="blur"
-            blurDataURL={artwork.blurDataUrl}
-            className="object-contain max-h-[70vh] w-auto mx-auto rounded-sm"
-            priority
-          />
-        </div>
-
-        {/* Metadata Panel */}
-        <div className="w-full lg:w-80 text-white space-y-4">
-          <h2
-            className="text-2xl md:text-3xl"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {artwork.title}
-          </h2>
-
-          <div className="space-y-2 text-sm md:text-base">
-            <p>
-              <span className="text-[var(--color-text-secondary)]">Year:</span>{" "}
-              {artwork.year}
-            </p>
-            <p>
-              <span className="text-[var(--color-text-secondary)]">
-                Medium:
-              </span>{" "}
-              {artwork.medium}
-            </p>
-            <div className="flex items-center gap-2">
-              <span className="text-[var(--color-text-secondary)]">Tags:</span>
-              <div className="flex gap-2">
-                {artwork.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-0.5 text-xs border border-white/30 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {artwork.description && (
-            <p className="text-sm text-[var(--color-accent-secondary)] leading-relaxed pt-2 border-t border-white/20">
-              {artwork.description}
-            </p>
-          )}
-        </div>
+        <Image
+          src={currentArtwork.imageSrc}
+          alt={currentArtwork.title}
+          width={currentArtwork.width}
+          height={currentArtwork.height}
+          placeholder="blur"
+          blurDataURL={currentArtwork.blurDataUrl}
+          className="object-contain max-h-[90vh] max-w-[90vw] w-auto h-auto"
+          priority
+        />
       </div>
     </div>
   );

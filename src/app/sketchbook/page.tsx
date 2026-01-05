@@ -15,8 +15,8 @@ export default function SketchbookPage() {
         </p>
       </header> */}
 
-      {/* Gallery without Filters */}
-      <GalleryGrid artwork={sketches} showFilters={false} />
+      {/* Gallery */}
+      <GalleryGrid artwork={sketches} />
     </div>
   );
 }

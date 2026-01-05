@@ -15,8 +15,8 @@ export default function HomePage() {
         </p>
       </header> */}
 
-      {/* Gallery with Filters */}
-      <GalleryGrid artwork={artwork} showFilters={true} />
+      {/* Gallery */}
+      <GalleryGrid artwork={artwork} />
     </div>
   );
 }
