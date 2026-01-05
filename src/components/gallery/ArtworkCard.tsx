@@ -17,7 +17,7 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
 
   return (
     <article
-      className="group relative cursor-pointer overflow-hidden rounded-sm bg-[var(--color-accent-secondary)]"
+      className="group relative cursor-pointer overflow-hidden w-full"
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -39,10 +39,11 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
           src={artwork.imageSrc}
           alt={artwork.title}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          // sizes="(max-width: 640px) 100vw"
           placeholder="blur"
           blurDataURL={artwork.blurDataUrl}
-          className="object-contain transition-opacity duration-300"
+          className="object-cover transition-opacity duration-300"
+          style={{ border: 'none', height: '100%', width: '100%' }}
         />
 
         {/* White Overlay on Hover with Simplified Metadata */}

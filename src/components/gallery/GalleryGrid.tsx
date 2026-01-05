@@ -15,7 +15,7 @@ export default function GalleryGrid({ artwork }: GalleryGridProps) {
   return (
     <>
       {/* Gallery Grid - Masonry Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[10px] gap-4 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[10px] gap-4">
         {artwork.map((item) => (
           <ArtworkCard
             key={item.id}
