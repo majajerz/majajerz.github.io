@@ -13,11 +13,12 @@ This project utilizes a modular skill architecture. **Before performing any task
 * **Framework:** Next.js 15.x (App Router) — *Reminder: `params` and `searchParams` are async.*
 * **React:** v19.x (Prioritize Server Components).
 * **Styling:** Tailwind CSS v4.x (CSS-first engine). Use `@theme` in `src/styles/globals.css`.
-* **Package Manager:** `pnpm`.
+* **Package Manager:** `npm` (uses `package-lock.json`).
+* **Hosting:** GitHub Pages (Static Export via GitHub Actions).
 
 ## 3. Core Implementation Rules
 
-* **BP-1 (Planning):** If there is any confusion ask the user clarifying questions. Reference the `frontend-design` skill for how to desgin.
+* **BP-1 (Planning):** If there is any confusion ask the user clarifying questions. Reference the `frontend-design` skill for how to design.
 * **BP-2 (Visuals):** Strictly follow `brand-guidelines`. If a design choice conflicts with the guidelines, ask for clarification.
 * **BP-3 (Images):** Always use Next.js `<Image />` with `placeholder="blur"`. Metadata (Title, Year) must be passed via props for SEO.
 * **BP-4 (Performance):** Use the React 19 Compiler. Avoid `'use client'` unless handling state (e.g., the Lightbox or Filter buttons).
@@ -41,9 +42,23 @@ public/
 
 ## 5. Development Workflow
 
-* **Local Dev:** `npm dev`
-* **Testing:** Run `npm test` (Refer to `webapp-testing` skill for edge cases).
-* **Build/Export:** `npm build` (Configured for Static HTML Export).
+* **Local Dev:** `npm run dev`
+* **Testing:** `npm test` (Refer to `webapp-testing` skill for edge cases).
+* **Build/Export:** `npm run build` (Outputs to `./out` directory for static hosting).
+
+## 5.1 GitHub Pages Deployment
+
+This site is configured for automatic deployment to GitHub Pages:
+
+* **Deployment Method:** GitHub Actions (workflow: `.github/workflows/deploy.yml`)
+* **Build Configuration:** Static export enabled in `next.config.ts` with `output: "export"`
+* **Important Files:**
+  - `public/.nojekyll` — Required to bypass Jekyll processing on GitHub Pages
+  - `.github/workflows/deploy.yml` — Automated build & deploy pipeline
+* **GitHub Settings Required:**
+  - Repository → Settings → Pages → Source: **"GitHub Actions"** (not "Deploy from a branch")
+* **Deployment Trigger:** Automatic on push to `main` branch
+* **Live URL:** `https://majajerz.github.io`
 
 ## 6. Site Structure & Content
 
@@ -65,13 +80,8 @@ This website has a simple three-page structure with navigation tabs:
 - Simple contact info display
 - Email address prominently shown
 
-## Navigation
+### Navigation
 Three tabs in order: **Home** → **Sketchbook** → **Contact**
-
-
-### Contact Page
-- Contact info (name, email)
-- Email address
 
 ## 7. Content Guidelines
 
