@@ -18,7 +18,7 @@ const latoBody = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Artist Portfolio",
+  title: "Portfolio",
   description:
     "A curated collection of artwork showcasing digital and physical creations.",
   keywords: ["art", "portfolio", "digital art", "painting", "illustration"],

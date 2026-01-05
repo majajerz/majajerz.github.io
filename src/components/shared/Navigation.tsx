@@ -22,7 +22,7 @@ export default function Navigation() {
             className="text-2xl md:text-3xl tracking-wide text-[var(--color-text-primary)] hover:text-[var(--color-accent-primary)] transition-colors"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Portfolio
+            Maja Jerzmanowska
           </Link>
 
           {/* Navigation Tabs */}

@@ -2,13 +2,13 @@ export default function ContactPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
       {/* Page Header */}
-      <header className="mb-10 md:mb-14">
+      {/* <header className="mb-10 md:mb-14">
         <h1 className="mb-4">Contact</h1>
         <p className="text-[var(--color-text-secondary)] max-w-2xl">
           Interested in my work? I&apos;d love to hear from you. Feel free to reach
           out for commissions, collaborations, or just to say hello.
         </p>
-      </header>
+      </header> */}
 
       {/* Contact Information */}
       <div className="max-w-xl">
@@ -25,14 +25,14 @@ export default function ContactPage() {
                   href="mailto:hello@example.com"
                   className="text-lg text-[var(--color-text-primary)] hover:text-[var(--color-accent-primary)] transition-colors underline underline-offset-4"
                 >
-                  hello@example.com
+                  majaj@email.sc.edu
                 </a>
               </div>
             </div>
           </section>
 
           {/* Additional Info */}
-          <section className="space-y-4">
+          {/* <section className="space-y-4">
             <h3 className="text-lg text-[var(--color-text-primary)]">
               What I&apos;m Open To
             </h3>
@@ -62,12 +62,12 @@ export default function ContactPage() {
                 <span>General inquiries</span>
               </li>
             </ul>
-          </section>
+          </section> */}
 
           {/* Response Time Note */}
-          <p className="text-sm text-[var(--color-text-secondary)] italic">
+          {/* <p className="text-sm text-[var(--color-text-secondary)] italic">
             I typically respond within 2-3 business days.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
