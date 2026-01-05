@@ -17,15 +17,15 @@ To access the artist's official brand identity and style resources, use this ski
 
 **Main Colors:**
 
-- Background: `#FAFAFA` - Soft, gallery-like backdrop for all pages
-- Text Primary: `#1A1A1A` - Near-black for high contrast and readability
-- Text Secondary: `#666666` - Medium gray for supporting text and captions
+- Background: `#FFFFFF` - Soft, gallery-like backdrop for all pages
+- Text Primary: `##000000` - Near-black for high contrast and readability
+- Text Secondary: `#000000` - Medium gray for supporting text and captions
 
-**Accent Colors:**
+<!-- **Accent Colors:**
 
 - Primary Accent: `#2C2C2C` - Charcoal for buttons and hover states
 - Secondary Accent: `#E8E8E8` - Light gray for borders and dividers
-- Highlight: `#000000` - Pure black for strong emphasis when needed
+- Highlight: `#000000` - Pure black for strong emphasis when needed -->
 
 **Usage Guidelines:**
 - Maintain high contrast ratios (WCAG AA minimum: 4.5:1)
@@ -37,11 +37,11 @@ To access the artist's official brand identity and style resources, use this ski
 
 **Fonts:**
 
-- **Headings:** Londrina Shadow (with Arial fallback)
-- **Body Text:** Lora (with Georgia fallback)
-- **Accent Font** (Optional): Serif font for artist statement
+- **Headings:** Lato Bold 700(with Arial fallback)
+- **Body Text:** Lato Light 300(with Arial fallback)
+<!-- - **Accent Font** (Optional): Serif font for artist statement
   - Suggested: Freight Text, Crimson Text, or Lora
-  - Usage: Artist bio, testimonials, quotes
+  - Usage: Artist bio, testimonials, quotes -->
 - **Note:** Fonts should be pre-installed in your environment for best results
 
 
