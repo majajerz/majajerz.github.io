@@ -9,15 +9,9 @@ interface ArtworkCardProps {
 }
 
 export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
-  // Calculate row span for masonry grid based on aspect ratio
-  const aspectRatio = artwork.height / artwork.width;
-  const baseWidth = 400; // approximate column width
-  const rowHeight = 10;
-  const rowSpan = Math.ceil(aspectRatio * baseWidth / rowHeight) + 4; // +4 for padding/gap
-
   return (
     <article
-      className="group relative cursor-pointer overflow-hidden w-full"
+      className="group relative cursor-pointer overflow-hidden w-full mb-4"
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -29,8 +23,7 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
       }}
       aria-label={`View ${artwork.title}`}
       style={{
-        aspectRatio: `${artwork.width}/${artwork.height}`,
-        gridRowEnd: `span ${rowSpan}`
+        aspectRatio: `${artwork.width}/${artwork.height}`
       }}
     >
       {/* Image Container with Dynamic Aspect Ratio */}

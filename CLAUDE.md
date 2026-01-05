@@ -98,3 +98,37 @@ Three tabs in order: **Home** → **Sketchbook** → **Contact**
 - **File Size**: Optimize to <500KB per image when possible
 - **Storage**: Store in `public/images/` or use a CMS/CDN
 
+## 8. Future TODOs / Alternative Approaches
+
+### Alternative Masonry Layout Options
+If `react-masonry-css` needs to be replaced in the future:
+
+**Option A: CSS Multi-Column Layout (No dependencies)**
+```css
+.gallery {
+  columns: 3;
+  column-gap: 1rem;
+}
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+```
+- Pros: No libraries, lightweight, native CSS
+- Cons: Fills columns vertically (top-to-bottom), not horizontally
+
+**Option C: CSS Grid Masonry (Complex but native)**
+```css
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  auto-rows: 1px;
+  gap: 1rem;
+}
+.gallery-item {
+  grid-row-end: span [calculated];
+}
+```
+- Pros: No dependencies, horizontal flow
+- Cons: Complex row-span calculations, requires precise math
+
