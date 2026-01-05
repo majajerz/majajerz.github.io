@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <rect fill="#E8E8E8" width="1800" height="1200"/>
+  <rect fill="#D0D0D0" x="100" y="100" width="1600" height="1000" rx="8"/>
+  <text x="900" y="600" font-family="Georgia, serif" font-size="64" fill="#666666" text-anchor="middle">Neon Nights</text>
+  <text x="900" y="680" font-family="Georgia, serif" font-size="32" fill="#999999" text-anchor="middle">Digital Painting</text>
+</svg>

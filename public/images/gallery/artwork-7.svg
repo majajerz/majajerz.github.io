@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400">
+  <rect fill="#E8E8E8" width="1400" height="1400"/>
+  <rect fill="#D4D4D4" x="100" y="100" width="1200" height="1200" rx="8"/>
+  <text x="700" y="700" font-family="Georgia, serif" font-size="56" fill="#666666" text-anchor="middle">Algorithmic Patterns</text>
+  <text x="700" y="780" font-family="Georgia, serif" font-size="28" fill="#999999" text-anchor="middle">Generative Art</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1100" viewBox="0 0 1100 1100">
+  <rect fill="#F0F0F0" width="1100" height="1100"/>
+  <rect fill="#E0E0E0" x="50" y="50" width="1000" height="1000" rx="4"/>
+  <text x="550" y="550" font-family="Georgia, serif" font-size="40" fill="#888888" text-anchor="middle">Nature Notes</text>
+  <text x="550" y="610" font-family="Georgia, serif" font-size="24" fill="#AAAAAA" text-anchor="middle">Pencil and Watercolor</text>
+</svg>

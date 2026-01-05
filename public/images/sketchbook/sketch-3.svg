@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <rect fill="#F0F0F0" width="900" height="1200"/>
+  <rect fill="#E0E0E0" x="50" y="50" width="800" height="1100" rx="4"/>
+  <text x="450" y="600" font-family="Georgia, serif" font-size="40" fill="#888888" text-anchor="middle">Gesture Drawings</text>
+  <text x="450" y="660" font-family="Georgia, serif" font-size="24" fill="#AAAAAA" text-anchor="middle">Ink on Paper</text>
+</svg>
