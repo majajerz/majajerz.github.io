@@ -53,7 +53,7 @@ export const finishedArtwork: Artwork[] = [
     title: "Cookie Bird",
     year: 2025,
     medium: "Glazed Ceramic",
-    imageSrc: "/images/gallery/paper6.jpg",
+    imageSrc: "/images/gallery/paper6.JPG",
     blurDataUrl: placeholderBlur,
     width: 1440,
     height: 1920,
