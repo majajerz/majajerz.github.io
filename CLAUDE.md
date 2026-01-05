@@ -81,7 +81,20 @@ This website has a simple three-page structure with navigation tabs:
 - Email address prominently shown
 
 ### Navigation
-Three tabs in order: **Home** → **Sketchbook** → **Contact**
+
+**Desktop (≥768px):**
+- Horizontal tabs in order: **Home** → **Sketchbook** → **Contact**
+- Active page indicated by underline below tab text
+- Tabs appear in top-right of navigation bar
+
+**Mobile (<768px):**
+- Hamburger menu icon (three horizontal lines) replaces tabs
+- Tapping hamburger opens right-aligned dropdown menu
+- White dropdown box with subtle borders and shadow
+- Menu items right-aligned with proper spacing
+- Active page indicated by underline below menu item
+- Menu auto-closes when navigating to new page
+- Body scroll disabled while menu is open
 
 ## 7. Content Guidelines
 
@@ -97,6 +110,64 @@ Three tabs in order: **Home** → **Sketchbook** → **Contact**
 - **Aspect Ratio**: Maintain original ratios
 - **File Size**: Optimize to <500KB per image when possible
 - **Storage**: Store in `public/images/` or use a CMS/CDN
+
+## 7.1 Gallery Layout Implementation
+
+### Current Masonry Layout
+The gallery uses **`react-masonry-css`** for puzzle-style image packing:
+
+**Key Features:**
+- Images pack tightly with consistent 16px gaps on all sides
+- Responsive breakpoints: 3 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
+- Maintains original aspect ratios
+- Horizontal flow (like Pinterest)
+
+**Implementation Files:**
+- `src/components/gallery/GalleryGrid.tsx` — Masonry wrapper with breakpoints
+- `src/components/gallery/ArtworkCard.tsx` — Individual image cards with `mb-4` spacing
+
+**Installation:**
+```bash
+npm install react-masonry-css
+```
+
+**Configuration:**
+```tsx
+const breakpointColumns = {
+  default: 3,  // 3 columns on large screens
+  1024: 2,     // 2 columns on tablets
+  640: 1       // 1 column on mobile
+};
+```
+
+## 7.2 Navigation Implementation
+
+### Responsive Navigation Component
+The navigation adapts to screen size with a hamburger menu for mobile devices.
+
+**Implementation File:**
+- `src/components/shared/Navigation.tsx` — Responsive navigation with hamburger menu
+
+**Desktop Behavior (md breakpoint: 768px+):**
+- Horizontal tab navigation visible at all times
+- `py-2` padding maintains proper spacing between text and active indicator
+- Active page shown with bottom border (`absolute bottom-0`)
+
+**Mobile Behavior (<768px):**
+- Hamburger icon (animated three-line menu) replaces tabs
+- Icon transforms into X when menu is open (rotate/translate animations)
+- Dropdown menu slides in from right (`translate-x-0` / `translate-x-full`)
+- Menu positioned at `top-16` (below navigation bar)
+- Right-aligned white box with borders and shadow
+- `useState` manages menu open/close state
+- `useEffect` handles:
+  - Auto-close on route change
+  - Body scroll prevention when menu is open
+
+**Key CSS Classes:**
+- Desktop tabs: `hidden md:flex` (hidden on mobile, flex on desktop)
+- Hamburger button: `md:hidden` (visible on mobile, hidden on desktop)
+- Menu dropdown: `fixed right-0 top-16` with slide animation
 
 ## 8. Future TODOs / Alternative Approaches
 
