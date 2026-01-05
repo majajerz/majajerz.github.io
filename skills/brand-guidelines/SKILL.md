@@ -18,8 +18,8 @@ To access the artist's official brand identity and style resources, use this ski
 **Main Colors:**
 
 - Background: `#FFFFFF` - Soft, gallery-like backdrop for all pages
-- Text Primary: `##000000` - Near-black for high contrast and readability
-- Text Secondary: `#000000` - Medium gray for supporting text and captions
+- Text Primary: `##000000`
+- Text Secondary: `#000000` 
 
 <!-- **Accent Colors:**
 
