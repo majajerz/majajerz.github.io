@@ -89,10 +89,10 @@ export const finishedArtwork: Artwork[] = [
 export const sketchbookArtwork: Artwork[] = [
   {
     id: "sketch-1",
-    title: "Portrait Study #12",
+    title: "Portraits of Sillies",
     year: 2024,
-    medium: "Graphite on Paper",
-    imageSrc: "/images/sketchbook/sketch-1.svg",
+    medium: "Markers",
+    imageSrc: "/images/sketchbook/sillies.jpg",
     blurDataUrl: placeholderBlur,
     width: 800,
     height: 1000,
