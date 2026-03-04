@@ -94,8 +94,8 @@ export const sketchbookArtwork: Artwork[] = [
     medium: "Markers",
     imageSrc: "/images/sketchbook/sillies.jpg",
     blurDataUrl: placeholderBlur,
-    width: 800,
-    height: 1000,
+    width: 3057,
+    height: 1542,
   },
   {
     id: "sketch-2",
