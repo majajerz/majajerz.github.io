@@ -137,6 +137,16 @@ export const sketchbookArtwork: Artwork[] = [
     width: 3099,
     height: 2500,
   },
+  {
+    id: "sketch-6",
+    title: "Clowning Around",
+    year: 2024,
+    medium: "Graphite and Markers",
+    imageSrc: "/images/sketchbook/ClowningAroundgoodsize.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 3096,
+    height: 2434,
+  },
 ];
 
 // Helper functions
