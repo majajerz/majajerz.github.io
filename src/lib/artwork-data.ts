@@ -107,6 +107,16 @@ export const sketchbookArtwork: Artwork[] = [
     width: 3057,
     height: 1542,
   },
+  {
+    id: "sketch-3",
+    title: "Portraits",
+    year: 2024,
+    medium: "Ink+Pastels",
+    imageSrc: "/images/sketchbook/portraits.gz.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 3095,
+    height: 2412,
+  },
 ];
 
 // Helper functions
