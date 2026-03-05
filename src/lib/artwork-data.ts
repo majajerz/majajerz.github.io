@@ -97,7 +97,16 @@ export const sketchbookArtwork: Artwork[] = [
     width: 3057,
     height: 1542,
   },
-  
+  {
+    id: "sketch-2",
+    title: "Swimmers+Plants",
+    year: 2024,
+    medium: "Markers",
+    imageSrc: "/images/sketchbook/s+p(sizegood).jpg",
+    blurDataUrl: placeholderBlur,
+    width: 3057,
+    height: 1542,
+  },
 ];
 
 // Helper functions
