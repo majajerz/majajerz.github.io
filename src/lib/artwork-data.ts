@@ -117,6 +117,16 @@ export const sketchbookArtwork: Artwork[] = [
     width: 3095,
     height: 2412,
   },
+  {
+    id: "sketch-4",
+    title: "Portraits",
+    year: 2024,
+    medium: "While Studying",
+    imageSrc: "/images/sketchbook/studyingpagegs.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 3071 ,
+    height: 2500,
+  },
 ];
 
 // Helper functions
