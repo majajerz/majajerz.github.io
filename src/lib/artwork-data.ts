@@ -129,7 +129,7 @@ export const finishedArtwork: Artwork[] = [
     title: "radish/beet",
     year: 2026,
     medium: "Illustration",
-    imageSrc: "/images/gallery/radish/beet copy.png",
+    imageSrc: "/images/gallery/radish/beet_copy.png",
     blurDataUrl: placeholderBlur,
     width: 1756,
     height: 2691,
