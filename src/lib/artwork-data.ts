@@ -113,6 +113,17 @@ export const finishedArtwork: Artwork[] = [
     height: 4800,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-10",
+    title: "Sprouting Spring 1",
+    year: 2026,
+    medium: "Illustration",
+    imageSrc: "/images/gallery/Flower1.gif",
+    blurDataUrl: placeholderBlur,
+    width: 2400,
+    height: 2400,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
