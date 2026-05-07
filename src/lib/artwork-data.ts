@@ -124,6 +124,17 @@ export const finishedArtwork: Artwork[] = [
     height: 2400,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-11",
+    title: "radish/beet",
+    year: 2026,
+    medium: "Illustration",
+    imageSrc: "/images/gallery/radish/beet copy.png",
+    blurDataUrl: placeholderBlur,
+    width: 1756,
+    height: 2691,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
