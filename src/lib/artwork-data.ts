@@ -102,6 +102,17 @@ export const finishedArtwork: Artwork[] = [
     height: 5100,
     description: "Combining traditional weaving with contemporary painting.",
   },
+   {
+    id: "artwork-9",
+    title: "Hunting Island",
+    year: 2026,
+    medium: "Illustration",
+    imageSrc: "/images/gallery/lineup_comic2.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 12150,
+    height: 4800,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
