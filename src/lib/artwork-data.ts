@@ -91,6 +91,17 @@ export const finishedArtwork: Artwork[] = [
     height: 5400,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-8",
+    title: "Pinto Beans",
+    year: 2026,
+    medium: "Digital Poster",
+    imageSrc: "/images/gallery/beans.png",
+    blurDataUrl: placeholderBlur,
+    width: 3300,
+    height: 5100,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
