@@ -80,6 +80,17 @@ export const finishedArtwork: Artwork[] = [
     height: 3018,
     description: "Combining traditional weaving with contemporary painting.",
   },
+   {
+    id: "artwork-7",
+    title: "UCDA Poster Competition",
+    year: 2026,
+    medium: "Digital Poster",
+    imageSrc: "/images/gallery/horizon.png",
+    blurDataUrl: placeholderBlur,
+    width: 3600,
+    height: 5400,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
