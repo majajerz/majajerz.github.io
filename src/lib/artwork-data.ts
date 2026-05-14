@@ -157,6 +157,17 @@ export const finishedArtwork: Artwork[] = [
     height: 3300,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-12",
+    title: "Freedom of Taste",
+    year: 2025,
+    medium: "Digtial Illustration",
+    imageSrc: "/images/gallery/FOT.png",
+    blurDataUrl: placeholderBlur,
+    width: 5400,
+    height: 7200,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
