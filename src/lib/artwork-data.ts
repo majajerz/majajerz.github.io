@@ -135,6 +135,28 @@ export const finishedArtwork: Artwork[] = [
     height: 2691,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-12",
+    title: "Jack Johnson Poster",
+    year: 2025,
+    medium: "Digtial Illustration",
+    imageSrc: "/images/gallery/Project1JJ.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2250,
+    height: 3300,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
+  {
+    id: "artwork-12",
+    title: "Jack Johnson Poster",
+    year: 2025,
+    medium: "Digtial Illustration",
+    imageSrc: "/images/gallery/Project1JJ.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2250,
+    height: 3300,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
