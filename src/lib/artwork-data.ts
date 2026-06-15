@@ -157,6 +157,28 @@ export const finishedArtwork: Artwork[] = [
     height: 7200,
     description: "Combining traditional weaving with contemporary painting.",
   },
+  {
+    id: "artwork-14",
+    title: "Dissection",
+    year: 2025,
+    medium: "Digtial",
+    imageSrc: "/images/gallery/Dissection.png",
+    blurDataUrl: placeholderBlur,
+    width: 3600,
+    height: 5400,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
+  {
+    id: "artwork-15",
+    title: "State of America",
+    year: 2025,
+    medium: "Digtial",
+    imageSrc: "/images/gallery/USA.png",
+    blurDataUrl: placeholderBlur,
+    width: 5992,
+    height: 7984,
+    description: "Combining traditional weaving with contemporary painting.",
+  },
 
   
   
