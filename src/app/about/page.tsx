@@ -8,7 +8,7 @@ const aboutContent = {
   // Each set of quotation marks becomes one paragraph on the page.
   paragraphs: [
     "I am a South Carolina-based artist beginning my junior year at the University of South Carolina, where I study Studio Art with a concentration in graphic design and illustration, and a second major in Neuroscience. I am interested in the impact art has on the brain, health, and well-being.",
-    "My inspiration ranges from painters like Hilma af Klint to Polish poster design. Color and boldness are central to my work, though I also enjoy the restraint of simple black-and-white compositions. I am especially drawn to the interaction between illustrated elements and design elements.",
+    "My inspiration ranges from painters like Hilma af Klint to the Polish School of Posters. Color and boldness are central to my work, though I also enjoy the restraint of simple black-and-white compositions. I am especially drawn to the interaction between illustrated elements and design elements.",
   ],
 };
 
