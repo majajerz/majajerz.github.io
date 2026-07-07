@@ -17,6 +17,16 @@ const placeholderBlur =
 // Finished artwork for the main gallery
 export const finishedArtwork: Artwork[] = [
   {
+    id: "artwork-17",
+    title: "Process Book Spread",
+    year: 2026,
+    medium: "Process Book Spread",
+    imageSrc: "/images/gallery/process-book-spread.png",
+    blurDataUrl: placeholderBlur,
+    width: 5100,
+    height: 3300,
+  },
+  {
     id: "artwork-7",
     title: "UCDA Poster Competition",
     year: 2026,
@@ -178,6 +188,16 @@ export const finishedArtwork: Artwork[] = [
     width: 1440,
     height: 1920,
     description: "Hand-thrown pottery with custom glazes.",
+  },
+  {
+    id: "artwork-16",
+    title: "Moody Shapes",
+    year: 2026,
+    medium: "Mixed Media",
+    imageSrc: "/images/gallery/moody-shapes.png",
+    blurDataUrl: placeholderBlur,
+    width: 2000,
+    height: 1480,
   },
 ];
 
