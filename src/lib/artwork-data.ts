@@ -202,7 +202,160 @@ export const finishedArtwork: Artwork[] = [
 ];
 
 // Sketches and work-in-progress for the Sketchbook page
-export const sketchbookArtwork: Artwork[] = [
+const newSketchbookArtwork: Artwork[] = [
+  {
+    id: "sketch-the-auditory-pathway",
+    title: "The Auditory Pathway",
+    year: 2026,
+    medium: "Graphite and Ink",
+    imageSrc: "/images/sketchbook/the-collection/01-the-auditory-pathway.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2026,
+    height: 1569,
+  },
+  {
+    id: "sketch-watercolor-study",
+    title: "Watercolor Study",
+    year: 2026,
+    medium: "Watercolor",
+    imageSrc: "/images/sketchbook/the-collection/02-watercolor-study.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2175,
+    height: 1709,
+  },
+  {
+    id: "sketch-small-details",
+    title: "Small Details",
+    year: 2026,
+    medium: "Gel Pen",
+    imageSrc: "/images/sketchbook/the-collection/03-small-details.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1097,
+    height: 2200,
+  },
+  {
+    id: "sketch-empty-brain",
+    title: "Empty Brain",
+    year: 2026,
+    medium: "Ink",
+    imageSrc: "/images/sketchbook/the-collection/04-empty-brain.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1661,
+    height: 1936,
+  },
+  {
+    id: "sketch-fathers-day-fun",
+    title: "Fathers Day Fun",
+    year: 2026,
+    medium: "Ink",
+    imageSrc: "/images/sketchbook/the-collection/06-fathers-day-fun.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1383,
+    height: 2200,
+  },
+  {
+    id: "sketch-grids-and-tables",
+    title: "Grids and Tables",
+    year: 2026,
+    medium: "Graphite and Ink",
+    imageSrc: "/images/sketchbook/the-collection/08-grids-and-tables.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2200,
+    height: 1716,
+  },
+  {
+    id: "sketch-possible-thoughts",
+    title: "Possible Thoughts",
+    year: 2026,
+    medium: "Graphite and Ink",
+    imageSrc: "/images/sketchbook/the-collection/10-possible-thoughts.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2122,
+    height: 1653,
+  },
+  {
+    id: "sketch-at-the-park",
+    title: "At the Park",
+    year: 2025,
+    medium: "Ink",
+    imageSrc: "/images/sketchbook/the-collection/11-at-the-park.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2054,
+    height: 1612,
+  },
+  {
+    id: "sketch-observations",
+    title: "Observations",
+    year: 2025,
+    medium: "Ink and Graphite",
+    imageSrc: "/images/sketchbook/the-collection/12-observations.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 2032,
+    height: 1688,
+  },
+  {
+    id: "sketch-in-sweden",
+    title: "In Sweden",
+    year: 2025,
+    medium: "Ink and Graphite",
+    imageSrc: "/images/sketchbook/the-collection/13-in-sweden.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1824,
+    height: 1432,
+  },
+  {
+    id: "sketch-in-mexico-city",
+    title: "In Mexico City",
+    year: 2025,
+    medium: "Graphite",
+    imageSrc: "/images/sketchbook/the-collection/14-in-mexico-city.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1811,
+    height: 1476,
+  },
+  {
+    id: "sketch-at-a-taco-place",
+    title: "At a Taco Place",
+    year: 2025,
+    medium: "Graphite",
+    imageSrc: "/images/sketchbook/the-collection/15-at-a-taco-place.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1840,
+    height: 1540,
+  },
+  {
+    id: "sketch-constructing-thoughts",
+    title: "Constructing Thoughts",
+    year: 2026,
+    medium: "Ink",
+    imageSrc: "/images/sketchbook/the-collection/16-constructing-thoughts.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1424,
+    height: 1280,
+  },
+  {
+    id: "sketch-up-north",
+    title: "Up North",
+    year: 2026,
+    medium: "Ink",
+    imageSrc: "/images/sketchbook/the-collection/17-up-north.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1712,
+    height: 1480,
+  },
+  {
+    id: "sketch-testing-color-combos",
+    title: "Testing Color Combos",
+    year: 2026,
+    medium: "Oil Pastels",
+    imageSrc: "/images/sketchbook/the-collection/18-testing-color-combos.jpg",
+    blurDataUrl: placeholderBlur,
+    width: 1878,
+    height: 1798,
+  },
+];
+
+const existingSketchbookArtwork: Artwork[] = [
   {
     id: "sketch-1",
     title: "Portraits of Sillies",
@@ -384,6 +537,33 @@ export const sketchbookArtwork: Artwork[] = [
     height: 1469,
   },
 ];
+
+const lowerExistingSketchIds = new Set(["sketch-1", "sketch-2"]);
+const reorderedExistingSketchbookArtwork = [
+  ...existingSketchbookArtwork.filter(
+    (artwork) => !lowerExistingSketchIds.has(artwork.id)
+  ),
+  ...existingSketchbookArtwork.filter((artwork) =>
+    lowerExistingSketchIds.has(artwork.id)
+  ),
+];
+
+// Alternate the new PDF pieces with the existing work so the masonry gallery
+// feels collected over time instead of presenting either set as one block.
+export const sketchbookArtwork: Artwork[] = Array.from(
+  {
+    length: Math.max(
+      newSketchbookArtwork.length,
+      reorderedExistingSketchbookArtwork.length
+    ),
+  },
+  (_, index) => [
+    newSketchbookArtwork[index],
+    reorderedExistingSketchbookArtwork[index],
+  ]
+)
+  .flat()
+  .filter((artwork): artwork is Artwork => artwork !== undefined);
 
 // Helper functions
 export function getFinishedArtwork(): Artwork[] {
