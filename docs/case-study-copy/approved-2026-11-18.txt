@@ -1,0 +1,178 @@
+Assignment 1
+
+Dissect a Single Web Page
+
+A collaborative analysis of ChatGPT’s homepage across desktop and mobile.
+
+Objectives
+
+Analyze the main elements of an assigned web page on desktop and mobile, using annotations to explain its structure and usability.
+
+Subject: ChatGPT
+
+ChatGPT was assigned to our group for a comparison of desktop and mobile interfaces. We annotated the pages to identify their main elements.
+
+What we noticed
+
+The message field gave the page a clear starting point, while suggested prompts offered examples of what to ask. Desktop arranged those prompts in a horizontal row; mobile stacked them vertically while keeping the same focus on starting a conversation.
+
+Working together in Miro
+
+I contributed to the group discussion and annotations in Miro. We used the shared board to ask questions and check our interpretations as we identified the different parts of the interface.
+
+Reflection
+
+With a small foundation in HTML, I was used to thinking about how a page was coded. This exercise shifted my attention to how its elements guide someone through it, and introduced me to working collaboratively in Miro.
+
+I still enjoyed some of the visually chaotic examples, even when they were difficult to navigate. That distinction stayed with me: a page can be fun to look at and still be frustrating to use.
+
+
+
+Assignment 2
+
+Information Architecture
+
+A collaborative sitemap study of MR’s website.
+
+Objectives
+
+Document the structure of the MR website in a sitemap, showing its page hierarchy and navigation connections.
+
+Sitemap
+
+Process
+
+Our group mapped MR’s existing website by following each navigation tab, the pages beneath it, and their links to deeper levels. We organized the pages with sticky notes to make the hierarchy visible. The sitemap made the relationship between top-level navigation and deeper pages easier to see.
+
+Reflection
+
+I enjoy thinking with sticky notes, so mapping a website physically made the exercise especially engaging. Comparing sites also showed me how much their depth can vary, particularly when a resource-heavy site has many different kinds of information to organize.
+
+
+
+Project 1
+
+Dieter Rams
+
+Single-page scrolling website · Mobile UI design & Figma prototype
+
+Objectives
+
+Design a single-page mobile website introducing Dieter Rams and three of his works. Use layout, typography, color, and navigation to reflect his restrained design approach.
+
+Final design & prototype
+
+I gave each of Rams’s designs space within a restrained layout. Visitors can scroll through the page, jump between the three works using the menu, and return to the top.
+
+Process & development
+
+I arranged the content vertically, with left-aligned text and a menu at the top right. Generous space around each object was intended to echo the restraint of Rams’s work and give each piece its own moment.
+
+Visual direction & components
+
+The neutral palette draws from the wood tones and natural colors I noticed in Rams’s pieces. It keeps the surrounding interface quiet so the objects remain the focus.
+
+Reflection & outcomes
+
+This project introduced me to Figma’s prototyping tools and reusable styles. The in-class demo helped me get started, but organizing interactions across frames was a challenge. I later realized that nested frames could have simplified the structure.
+
+I’m happy with the restrained visual direction. In another pass, I would reduce the amount of text and spend more time testing the flow between sections.
+
+
+
+Project 2
+
+Tagged Bird, Do Not Disturb
+
+Ad Council Campaign · Billboards, digital advertising, website & widget
+
+Objectives
+
+Create a public awareness campaign about a South Carolina law protecting tagged pigeons, including three billboards, digital ads, a responsive website, and a proposed widget. Help viewers recognize the birds and understand why they should be left undisturbed.
+
+The campaign
+
+For this student brief, I developed an Ad Council awareness campaign around S.C. Code § 50-11-853. The message addresses people who might take home a tired-looking tagged pigeon without realizing it is protected.
+
+The text-heavy billboard pairs the slogan with a pigeon so an unfamiliar phrase has an immediate visual reference. A close crop of the face gives the image-heavy version an expressive, slightly goofy character. The 50/50 version balances the full bird with the copy.
+
+Desktop website
+
+I organized the site around Code, Tag, and More. Code introduces the law and penalties; Tag explains how to recognize a banded pigeon; More links to the AU band database and state statute. The playful identity leads into direct information for someone who has found a bird.
+
+Mobile website
+
+On mobile, the content stacks vertically while retaining the same Code, Tag, and More navigation and campaign identity.
+
+Instagram & digital ads
+
+The Instagram layout took several passes to balance the illustration, slogan, and Ad Council logo within a square. I brought it closer to the text-heavy billboard, whose tagged-foot illustration felt especially relevant to the message.
+
+The horizontal banner relies on bold typography. The vertical skyscraper gives the illustration more space, using the same slogan and palette to connect it to the campaign.
+
+Widget
+
+The widget is a proposed band-code lookup inspired by pet microchip searches. A finder would enter the code to look for information and next steps before taking the bird home. The lookup is a design concept, not a working service.
+
+Process & development
+
+Moodboard
+
+I explored bold color, graphic shapes, and an expressive pigeon to catch attention quickly. A slightly amusing tone made the unfamiliar subject feel approachable.
+
+Personas & audience
+
+Suburban Sam, the Everyman, cares about wildlife but may take a tired bird home without understanding the consequences. Handler Hank, the Sage, is an experienced homing-pigeon breeder and racer who wants the birds to continue their journeys safely.
+
+Sam informed the clear introduction for people unfamiliar with the law. Hank directed attention to recognizing bands and finding useful information.
+
+Sketches & explorations
+
+Early sketches included a pigeon in a hat, but the drawings kept resembling ducks or geese. Studying pigeons helped me refine the character, with the banded foot central to the idea.
+
+In Illustrator, I vectorized the drawings and tested layouts, colors, and the balance of image and type. Several flat-feeling versions preceded the brighter direction that tied the three billboards together.
+
+Reflection & outcomes
+
+This felt closer to a real-world design brief than my previous projects because one identity had to work across so many formats. I enjoyed developing the birds and the bold visual language, while the billboard templates and Ad Council requirements pushed me to work within tighter constraints.
+
+The biggest learning curve was adapting the campaign into Figma, especially sizing and arranging the desktop layout. I would revisit those proportions and refine the interactions. Building the campaign showed me both how much I enjoy visual identity work and where I want to strengthen my web design skills.
+
+
+
+Project 3
+
+Exhibition Folio & Augmented Reality
+
+Jim Arendt · In the Making · South Carolina State Museum · Printed lookbook & AR experience
+
+Objectives
+
+Design a printed folio introducing Jim Arendt for the South Carolina State Museum’s In the Making exhibition. Combine paper construction, expressive typography, and augmented reality to communicate the artist’s life and work.
+
+Final folio
+
+The denim strips in the second spread echo the material Arendt tears and incorporates into his work. I wanted the folio’s construction to make that connection tangible as visitors unfold it.
+
+Augmented reality
+
+AR adds Arendt’s voice explaining his work and a digital flip-through of additional pieces. It extends what the printed folio can show.
+
+Scan the QR code, open the web app, and press Start. Then point the camera at each of the two trigger images to activate the content.
+
+Process & development
+
+Research & visual direction
+
+Denim textures, a navy palette, and lettering reminiscent of jeans patches connect the folio to Arendt’s materials. I was interested in how wear on the printed surfaces might eventually echo worn denim.
+
+Sketches, construction & testing
+
+I built mockups at several sizes and with different papers, working through at least three redesigns. The folds and panel relationships became clearer through making, but heavier final stock changed how the panels aligned.
+
+Reflection & outcomes
+
+This project expanded how I think about design beyond the screen. Printing, binding, and building the folio taught me how much the final experience depends on materials and craftsmanship.
+
+I enjoyed the early paper mockups, but moving to heavier stock exposed alignment issues that lighter tests had missed. In future, I would test the complete construction with the final paper earlier and pay closer attention to wear at the hinges. Despite the frustrations, having a physical piece that people can unfold and explore made the process worthwhile.
+

@@ -8,6 +8,7 @@ export interface Artwork {
   width: number;
   height: number;
   description?: string;
+  caseStudyHref?: string;
 }
 
 // Placeholder blur data URL (tiny gray placeholder)
@@ -18,6 +19,7 @@ const placeholderBlur =
 export const finishedArtwork: Artwork[] = [
   {
     id: "ad-council-project-1",
+    caseStudyHref: "/case-studies/project-2/",
     title: "Ad Council Project #1",
     year: 2026,
     medium: "Digital",
@@ -28,6 +30,7 @@ export const finishedArtwork: Artwork[] = [
   },
   {
     id: "ad-council-project-2",
+    caseStudyHref: "/case-studies/project-2/",
     title: "Ad Council Project #2",
     year: 2026,
     medium: "Digital",
@@ -38,6 +41,7 @@ export const finishedArtwork: Artwork[] = [
   },
   {
     id: "ad-council-project-3",
+    caseStudyHref: "/case-studies/project-2/",
     title: "Ad Council Project #3",
     year: 2026,
     medium: "Digital",

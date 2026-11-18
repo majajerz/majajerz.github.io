@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { Artwork } from "@/lib/artwork-data";
 
 interface ArtworkCardProps {
@@ -12,11 +13,11 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
   return (
     <article
       className="group relative cursor-pointer overflow-hidden w-full mb-4"
-      onClick={onClick}
-      role="button"
-      tabIndex={0}
+      onClick={artwork.caseStudyHref ? undefined : onClick}
+      role={artwork.caseStudyHref ? undefined : "button"}
+      tabIndex={artwork.caseStudyHref ? undefined : 0}
       onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
+        if (!artwork.caseStudyHref && (e.key === "Enter" || e.key === " ")) {
           e.preventDefault();
           onClick();
         }
@@ -26,6 +27,7 @@ export default function ArtworkCard({ artwork, onClick }: ArtworkCardProps) {
         aspectRatio: `${artwork.width}/${artwork.height}`
       }}
     >
+      {artwork.caseStudyHref && <Link href={artwork.caseStudyHref} className="absolute inset-0 z-10" aria-label={`View case study: ${artwork.title}`} />}
       {/* Image Container with Dynamic Aspect Ratio */}
       <div className="relative w-full h-full">
         <Image

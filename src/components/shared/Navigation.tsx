@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Case Studies", href: "/case-studies/" },
   { label: "Sketchbook", href: "/sketchbook" },
   { label: "About", href: "/about" },
 ];
@@ -47,7 +48,7 @@ export default function Navigation() {
           {/* Desktop Navigation Tabs */}
           <ul className="hidden md:flex items-center gap-2">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = item.href === "/case-studies/" ? pathname.startsWith("/case-studies") : (pathname.replace(/\/$/, "") || "/") === item.href;
               return (
                 <li key={item.href}>
                   <Link
@@ -111,7 +112,7 @@ export default function Navigation() {
       >
         <ul className="flex flex-col py-4 px-8 gap-4 min-w-[200px]">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = item.href === "/case-studies/" ? pathname.startsWith("/case-studies") : (pathname.replace(/\/$/, "") || "/") === item.href;
             return (
               <li key={item.href}>
                 <Link

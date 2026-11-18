@@ -74,6 +74,8 @@ export default function AboutPage() {
               >
                 {contact.email}
               </a>
+              <p className="mt-5 mb-2 text-sm uppercase tracking-[0.16em]">Blog</p>
+              <a href="https://medium.com/@MajaJerzmanowska-ARTS347" target="_blank" rel="noopener noreferrer" className="text-base underline underline-offset-4">Read my ARTS 347 blog on Medium</a>
             </section>
           </div>
         </aside>
